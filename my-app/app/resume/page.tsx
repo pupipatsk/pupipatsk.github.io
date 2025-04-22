@@ -1,0 +1,329 @@
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
+import { Badge } from "@/components/ui/badge"
+import { Download, ExternalLink } from "lucide-react"
+
+export default function ResumePage() {
+  return (
+    <div className="container max-w-4xl py-12">
+      <div className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
+        <div>
+          <h1 className="text-3xl font-bold">Pupipat Singkhorn</h1>
+          <div className="mt-2 flex flex-col space-y-1 text-muted-foreground sm:flex-row sm:items-center sm:space-x-4 sm:space-y-0">
+            <span>📞 082-642-9767</span>
+            <span className="hidden sm:inline">•</span>
+            <span>📧 pupipat.sk@gmail.com</span>
+            <span className="hidden sm:inline">•</span>
+            <span>📍 Bangkok, Thailand</span>
+          </div>
+          <div className="mt-2 flex flex-wrap gap-2">
+            <Link
+              href="https://www.linkedin.com/in/pupipatsk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground"
+            >
+              LinkedIn <ExternalLink className="ml-1 h-3 w-3" />
+            </Link>
+            <span className="text-muted-foreground">•</span>
+            <Link
+              href="https://github.com/pupipatsk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground"
+            >
+              GitHub <ExternalLink className="ml-1 h-3 w-3" />
+            </Link>
+            <span className="text-muted-foreground">•</span>
+            <Link
+              href="https://pupipatsk.github.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground"
+            >
+              Portfolio Website <ExternalLink className="ml-1 h-3 w-3" />
+            </Link>
+          </div>
+        </div>
+        <Button variant="outline" className="shrink-0" asChild>
+          <Link href="#" download>
+            <Download className="mr-2 h-4 w-4" /> Download CV
+          </Link>
+        </Button>
+      </div>
+
+      <Separator className="my-8" />
+
+      {/* Education Section */}
+      <section className="mb-8">
+        <h2 className="mb-4 text-2xl font-bold">Education</h2>
+        <div className="space-y-6">
+          <div className="space-y-2">
+            <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
+              <h3 className="font-bold">Chulalongkorn University</h3>
+              <span className="text-sm text-muted-foreground">2022 - Present</span>
+            </div>
+            <p className="font-medium">Bachelor of Engineering - Computer Engineering Major</p>
+            <p className="text-muted-foreground">GPA: 3.48</p>
+            <p className="text-sm text-muted-foreground">
+              Relevant Coursework: Pattern Recognition (Deep Learning), Natural Language Processing Systems (NLP),
+              Algorithm & Data Structures, Database Systems, Optimization, Statistics, Signal Processing.
+            </p>
+          </div>
+
+          <div className="space-y-2">
+            <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
+              <h3 className="font-bold">Triam Udom Suksa School</h3>
+              <span className="text-sm text-muted-foreground">2019 - 2022</span>
+            </div>
+            <p className="font-medium">Science-Mathematics Major</p>
+            <p className="text-muted-foreground">GPA: 3.85</p>
+            <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
+              <li>• Thailand Physics Olympiad (TPhO): Bronze Medal (19th TPhO), Participated (18th TPhO)</li>
+              <li>• Triam Udom Photo Club (Staff and Member): Captured photos at various school events</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Work Experience Section */}
+      <section className="mb-8">
+        <h2 className="mb-4 text-2xl font-bold">Work Experience</h2>
+        <div className="space-y-6">
+          <div className="space-y-2">
+            <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
+              <h3 className="font-bold">Risk Management Analyst Intern — SCBX</h3>
+              <span className="text-sm text-muted-foreground">May 2025 - July 2025 (Upcoming)</span>
+            </div>
+            <p className="text-muted-foreground">
+              Upcoming internship focused on financial risk analysis, modeling, and management within one of Thailand's
+              leading financial technology conglomerates. More details to be added upon completion.
+            </p>
+          </div>
+
+          <div className="space-y-2">
+            <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
+              <h3 className="font-bold">Data Scientist Intern — Kiatnakin Phatra Bank</h3>
+              <span className="text-sm text-muted-foreground">June 2024 - July 2024</span>
+            </div>
+            <div className="space-y-2">
+              <div>
+                <h4 className="font-medium">Used Car Price Forecasting</h4>
+                <ul className="ml-5 list-disc text-sm text-muted-foreground">
+                  <li>
+                    Developed ensemble machine learning models to forecast used car prices, aiding strategic decisions
+                    for automotive loan approvals.
+                  </li>
+                  <li>
+                    Collected and cleaned real-world business data, incorporating macro- and micro-economic factors.
+                  </li>
+                  <li>Leveraged time-series analysis and Bayesian optimization techniques for enhanced accuracy.</li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-medium">Loss On Sale Forecasting for NPLs</h4>
+                <ul className="ml-5 list-disc text-sm text-muted-foreground">
+                  <li>
+                    Built predictive models to estimate losses on Non-Performing Loans (NPLs), improving the bank's
+                    credit risk management.
+                  </li>
+                  <li>
+                    Applied techniques like coarse classing, binning, and memory optimization to improve performance.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-2">
+            <h3 className="font-bold">Freelance</h3>
+            <div className="space-y-2">
+              <div>
+                <h4 className="font-medium">Physics & Mathematics Tutor</h4>
+                <p className="text-sm text-muted-foreground">
+                  Tutored for Physics Olympiad camp and university admissions.
+                </p>
+              </div>
+              <div>
+                <h4 className="font-medium">Photographer</h4>
+                <p className="text-sm text-muted-foreground">
+                  Photographed various events and private sessions.
+                  <Link
+                    href="https://www.instagram.com/pupick.sk/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-1 inline-flex items-center text-sm hover:text-foreground"
+                  >
+                    Instagram Portfolio <ExternalLink className="ml-1 h-3 w-3" />
+                  </Link>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Extracurricular Activities & Achievements Section */}
+      <section className="mb-8">
+        <h2 className="mb-4 text-2xl font-bold">Extracurricular Activities & Achievements</h2>
+        <div className="space-y-6">
+          <div className="space-y-2">
+            <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
+              <h3 className="font-bold">Aihack Thailand 2023 - AI Hackathon</h3>
+              <span className="text-sm text-muted-foreground">December 2023</span>
+            </div>
+            <p className="font-medium">🏆 1st Prize & Best Performance Prize</p>
+            <p className="text-sm text-muted-foreground">
+              Created a machine learning model to forecast credit default risk.
+            </p>
+          </div>
+
+          <div className="space-y-2">
+            <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
+              <h3 className="font-bold">Stock Return Forecasting with Portfolio Optimization Project</h3>
+              <span className="text-sm text-muted-foreground">April - May 2024</span>
+            </div>
+            <ul className="ml-5 list-disc text-sm text-muted-foreground">
+              <li>Developed an alpha factor model to forecast stock returns using classical ML and LSTM networks.</li>
+              <li>Designed and implemented quantitative trading strategies using historical data for backtesting.</li>
+              <li>Integrated portfolio optimization techniques to maximize returns and minimize risks.</li>
+            </ul>
+          </div>
+
+          <div className="space-y-2">
+            <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
+              <h3 className="font-bold">Machine Learning for Fundraising Campaigns — SAS x CBS Hackathon Season 4</h3>
+              <span className="text-sm text-muted-foreground">October 2024</span>
+            </div>
+            <p className="font-medium">🎖️ 4th Place</p>
+            <ul className="ml-5 list-disc text-sm text-muted-foreground">
+              <li>Built a 2-stage ensemble model for targeted donor outreach.</li>
+              <li>Achieved high-precision donor predictions and effective cost management.</li>
+            </ul>
+          </div>
+
+          <div className="space-y-2">
+            <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
+              <h3 className="font-bold">Investment Portfolio Analytics Dashboard Web App</h3>
+              <span className="text-sm text-muted-foreground">November 2024</span>
+            </div>
+            <ul className="ml-5 list-disc text-sm text-muted-foreground">
+              <li>Developed an OCR/LLM-powered system to extract and organize investment data.</li>
+              <li>
+                Built and deployed a dashboard with key performance metrics (ROI, Sharpe Ratio, Volatility, CVaR).
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-2">
+            <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
+              <h3 className="font-bold">Business Case Competitions</h3>
+              <span className="text-sm text-muted-foreground">2023</span>
+            </div>
+            <ul className="ml-5 list-disc text-sm text-muted-foreground">
+              <li>Hult Prize at Chulalongkorn — Developed a social enterprise idea aligned with UN SDGs.</li>
+              <li>
+                Chulalongkorn Case Discovery x Ascend Money — Formulated a strategic plan for financial services
+                application.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Skills & Certifications Section */}
+      <section className="mb-8">
+        <h2 className="mb-4 text-2xl font-bold">Skills & Certifications</h2>
+        <div className="grid gap-6 md:grid-cols-2">
+          <Card>
+            <CardHeader>
+              <CardTitle>Technical Skills</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <div>
+                  <h3 className="font-medium">Languages</h3>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {["Python", "SQL", "C++", "C", "HTML", "CSS", "LaTeX", "Markdown"].map((skill) => (
+                      <Badge key={skill} variant="outline">
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="font-medium">Libraries & Tools</h3>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {["PyTorch", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Plotly", "Streamlit"].map(
+                      (skill) => (
+                        <Badge key={skill} variant="outline">
+                          {skill}
+                        </Badge>
+                      ),
+                    )}
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="font-medium">Applications</h3>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {["Excel", "Power BI", "Tableau", "Git", "GitHub"].map((skill) => (
+                      <Badge key={skill} variant="outline">
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="font-medium">Languages</h3>
+                  <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
+                    <li>• Thai (Native)</li>
+                    <li>• English</li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Certifications</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-3">
+                <li className="space-y-1">
+                  <div className="font-medium">Financial Engineering and Risk Management Specialization</div>
+                  <div className="text-sm text-muted-foreground">Columbia University (Nov 2024)</div>
+                </li>
+                <li className="space-y-1">
+                  <div className="font-medium">Machine Learning Specialization</div>
+                  <div className="text-sm text-muted-foreground">DeepLearning.AI & Stanford University (Aug 2024)</div>
+                </li>
+                <li className="space-y-1">
+                  <div className="font-medium">Google Data Analytics Professional Certificate</div>
+                  <div className="text-sm text-muted-foreground">Google (Jul 2023)</div>
+                </li>
+              </ul>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Interests Section */}
+      <section>
+        <h2 className="mb-4 text-2xl font-bold">Interests</h2>
+        <div className="flex flex-wrap gap-2">
+          {["Business", "Economics", "Politics", "Books", "History", "Philosophy"].map((interest) => (
+            <Badge key={interest} variant="secondary">
+              {interest}
+            </Badge>
+          ))}
+        </div>
+      </section>
+    </div>
+  )
+}
