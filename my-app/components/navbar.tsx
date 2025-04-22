@@ -24,7 +24,7 @@ export default function Navbar() {
           href="/"
           className="flex items-center gap-2 font-serif text-xl font-medium"
         >
-          <UserRound className="w-6 h-6 mb-1"/> Pupipat Singkhorn
+          <UserRound className="w-5 h-5"/> pupipat.sk
         </Link>
 
         {/* Desktop Navigation */}

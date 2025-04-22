@@ -181,12 +181,25 @@ export default function Home() {
                     Bachelor of Engineering - Computer Engineering Major
                   </p>
                   {/* <p className="text-muted-foreground">GPA: 3.48</p> */}
-                  <p className="text-sm text-muted-foreground">
-                    Relevant Coursework: Pattern Recognition (Deep Learning),
-                    Natural Language Processing Systems (NLP), Algorithm & Data
-                    Structures, Database Systems, Optimization, Statistics,
-                    Signal Processing.
-                  </p>
+                    <div className="mt-2 flex flex-wrap gap-2">
+                    {[
+                      "Pattern Recognition (Deep Learning)",
+                      "Natural Language Processing Systems (NLP)",
+                      "Algorithm & Data Structures",
+                      "Database Systems",
+                      "Optimization",
+                      "Statistics",
+                      "Signal Processing",
+                    ].map((course) => (
+                      <Badge
+                      key={course}
+                      variant="outline"
+                      className="rounded-full font-mono text-sm font-light text-muted-foreground"
+                      >
+                      {course}
+                      </Badge>
+                    ))}
+                    </div>
                 </div>
 
                 <div className="space-y-2">
@@ -211,7 +224,7 @@ export default function Home() {
               </h2>
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-lg font-medium font-sans">Languages</h3>
+                  <h3 className="text-lg font-medium font-sans">Programming languages</h3>
                   <div className="mt-2 flex flex-wrap gap-2">
                     {[
                       "Python",
