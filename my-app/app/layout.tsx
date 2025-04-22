@@ -1,40 +1,48 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Frank_Ruhl_Libre, Geist as Geist_Sans } from "next/font/google"
-import "./globals.css"
-import Navbar from "@/components/navbar"
-import Footer from "@/components/footer"
-import { ThemeProvider } from "@/components/theme-provider"
+import type React from "react";
+import type { Metadata } from "next";
+import { Libre_Caslon_Text, Geist } from "next/font/google";
+import "./globals.css";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+import { ThemeProvider } from "@/components/theme-provider";
 
-// Serif font for headings (Frank Ruhl Libre)
-const frankRuhlLibre = Frank_Ruhl_Libre({
+// Serif font for headings
+const serifFont = Libre_Caslon_Text({
   subsets: ["latin"],
-  display: "swap",
   variable: "--font-serif",
-})
+  display: "swap",
+  weight: ["400", "700"],
+});
 
-// Sans Serif font for body text and subheadings (Geist)
-const geistSans = Geist_Sans({
+// Sans Serif font for body text and subheadings
+const sansSerifFont = Geist({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-sans",
-})
+});
 
 export const metadata: Metadata = {
   title: "Pupipat Singkhorn | Portfolio",
-  description: "Personal portfolio of Pupipat Singkhorn - Computer Engineering Student and Data Scientist",
-    generator: 'v0.dev'
-}
+  description:
+    "Personal portfolio of Pupipat Singkhorn - Computer Engineering Student and Data Scientist",
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${frankRuhlLibre.variable} ${geistSans.variable} font-sans`}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
+      <body
+        className={`${serifFont.variable} ${sansSerifFont.variable} font-sans`}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="light"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
           <div className="flex min-h-screen flex-col">
             <Navbar />
             <main className="flex-1">{children}</main>
@@ -43,5 +51,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }
