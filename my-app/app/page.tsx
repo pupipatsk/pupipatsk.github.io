@@ -39,7 +39,7 @@ export default function Home() {
             </div>
             <div className="mx-auto aspect-square overflow-hidden rounded-full border border-border">
               <Image
-                src="/placeholder.svg?height=450&width=450"
+                src="/profile/profile-photo.png"
                 width={450}
                 height={450}
                 alt="Portrait of Pupipat Singkhorn"
