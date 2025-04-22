@@ -1,27 +1,30 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { ModeToggle } from "./mode-toggle"
-import { cn } from "@/lib/utils"
-import { Menu } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { ModeToggle } from "./mode-toggle";
+import { cn } from "@/lib/utils";
+import { Menu } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { UserRound } from "lucide-react";
 export default function Navbar() {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Resume", path: "/resume" },
     { name: "Photography", path: "/photography" },
-  ]
+  ];
 
   return (
     <header className="border-b border-border">
       <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="font-serif text-xl font-medium">
-          Pupipat Singkhorn
+        <Link
+          href="/"
+          className="flex items-center gap-2 font-serif text-xl font-medium"
+        >
+          <UserRound className="w-6 h-6 mb-1"/> Pupipat Singkhorn
         </Link>
 
         {/* Desktop Navigation */}
@@ -33,7 +36,9 @@ export default function Navbar() {
                 href={item.path}
                 className={cn(
                   "text-sm transition-colors hover:text-foreground/80",
-                  pathname === item.path ? "text-foreground font-medium" : "text-foreground/60",
+                  pathname === item.path
+                    ? "text-foreground font-medium"
+                    : "text-foreground/60"
                 )}
               >
                 {item.name}
@@ -61,7 +66,9 @@ export default function Navbar() {
                     href={item.path}
                     className={cn(
                       "text-base transition-colors hover:text-foreground/80 py-2",
-                      pathname === item.path ? "text-foreground font-medium" : "text-foreground/60",
+                      pathname === item.path
+                        ? "text-foreground font-medium"
+                        : "text-foreground/60"
                     )}
                   >
                     {item.name}
@@ -73,5 +80,5 @@ export default function Navbar() {
         </div>
       </div>
     </header>
-  )
+  );
 }
