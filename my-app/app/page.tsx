@@ -1,9 +1,9 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Award, Code, Linkedin, Github } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight, Award, Code, Linkedin, Github } from "lucide-react";
 
 export default function Home() {
   return (
@@ -12,17 +12,20 @@ export default function Home() {
       <section className="py-20 md:py-28">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_450px]">
-            <div className="flex flex-col justify-center space-y-4">
+            <div className="flex flex-col justify-center space-y-4 mx-auto lg:ml-16 lg:mx-0">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Pupipat Singkhorn</h1>
+                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                  Pupipat Singkhorn
+                </h1>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl">
-                  Computer Engineering Student & Data Scientist
+                  Computer Engineering Student
                 </p>
               </div>
               <p className="max-w-[600px] text-muted-foreground">
-                I'm a Computer Engineering student at Chulalongkorn University with a passion for data science, machine
-                learning, and financial technology. Currently focused on developing skills in risk management and
-                quantitative analysis.
+                I'm a Computer Engineering student at Chulalongkorn University
+                with a passion for data science, machine learning, and financial
+                technology. Currently focused on developing skills in risk
+                management and quantitative analysis.
               </p>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
                 <Button asChild>
@@ -37,7 +40,7 @@ export default function Home() {
                 </Button>
               </div>
             </div>
-            <div className="mx-auto aspect-square overflow-hidden rounded-full border border-border">
+            <div className="aspect-square overflow-hidden rounded-full border border-border mx-auto lg:mr-16 lg:mx-0">
               <Image
                 src="/profile/profile-photo.png"
                 width={450}
@@ -51,8 +54,57 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Achievements Section */}
+      {/* Featured Work Section */}
       <section className="border-t border-border py-12 md:py-16">
+        <div className="container px-4 md:px-6">
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+            <div className="space-y-2">
+              <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
+                Featured Work
+              </h2>
+              <p className="max-w-[600px] text-muted-foreground">
+                A selection of my recent projects and collaborations.
+              </p>
+            </div>
+          </div>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {[1, 2, 3].map((item) => (
+              <div
+                key={item}
+                className="group relative overflow-hidden rounded-lg border border-border"
+              >
+                <div className="aspect-[4/3] w-full">
+                  <Image
+                    src={`/placeholder.svg?height=300&width=400`}
+                    width={400}
+                    height={300}
+                    alt={`Featured project ${item}`}
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-background/80 to-transparent p-6 text-white">
+                  <h3 className="font-serif text-lg font-medium">
+                    Project Title {item}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    Photography / Design
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8 flex justify-center">
+            <Button variant="outline" asChild>
+              <Link href="/photography">
+                View All Work <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Achievements Section */}
+      {/* <section className="border-t border-border py-12 md:py-16">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
@@ -107,23 +159,33 @@ export default function Home() {
             </Card>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Skills & Education Section */}
       <section className="border-t border-border py-12 md:py-16 bg-muted/50">
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12">
             <div className="space-y-4">
-              <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">Education</h2>
+              <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
+                Education
+              </h2>
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <h3 className="text-xl font-bold">Chulalongkorn University</h3>
-                  <p className="text-sm text-muted-foreground">2022 - Present</p>
-                  <p className="font-medium">Bachelor of Engineering - Computer Engineering Major</p>
-                  <p className="text-muted-foreground">GPA: 3.48</p>
+                  <h3 className="text-xl font-bold">
+                    Chulalongkorn University
+                  </h3>
                   <p className="text-sm text-muted-foreground">
-                    Relevant Coursework: Pattern Recognition (Deep Learning), Natural Language Processing Systems (NLP),
-                    Algorithm & Data Structures, Database Systems, Optimization, Statistics, Signal Processing.
+                    2022 - Present
+                  </p>
+                  <p className="font-medium">
+                    Bachelor of Engineering - Computer Engineering Major
+                  </p>
+                  {/* <p className="text-muted-foreground">GPA: 3.48</p> */}
+                  <p className="text-sm text-muted-foreground">
+                    Relevant Coursework: Pattern Recognition (Deep Learning),
+                    Natural Language Processing Systems (NLP), Algorithm & Data
+                    Structures, Database Systems, Optimization, Statistics,
+                    Signal Processing.
                   </p>
                 </div>
 
@@ -133,7 +195,10 @@ export default function Home() {
                   <p className="font-medium">Science-Mathematics Major</p>
                   <p className="text-muted-foreground">GPA: 3.85</p>
                   <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
-                    <li>• Thailand Physics Olympiad (TPhO): Bronze Medal (19th TPhO)</li>
+                    <li>
+                      • Thailand Physics Olympiad (TPhO): Bronze Medal (19th
+                      TPhO)
+                    </li>
                     <li>• Triam Udom Photo Club (Staff and Member)</li>
                   </ul>
                 </div>
@@ -141,13 +206,28 @@ export default function Home() {
             </div>
 
             <div className="space-y-4">
-              <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">Technical Skills</h2>
+              <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">
+                Technical Skills
+              </h2>
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-lg font-medium">Languages</h3>
+                  <h3 className="text-lg font-medium font-sans">Languages</h3>
                   <div className="mt-2 flex flex-wrap gap-2">
-                    {["Python", "SQL", "C++", "C", "HTML", "CSS", "LaTeX", "Markdown"].map((skill) => (
-                      <Badge key={skill} variant="outline" className="rounded-full">
+                    {[
+                      "Python",
+                      "SQL",
+                      "C++",
+                      "C",
+                      "HTML",
+                      "CSS",
+                      "LaTeX",
+                      "Markdown",
+                    ].map((skill) => (
+                      <Badge
+                        key={skill}
+                        variant="outline"
+                        className="rounded-full font-mono text-sm font-light text-muted-foreground"
+                      >
                         {skill}
                       </Badge>
                     ))}
@@ -155,35 +235,64 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-medium">Libraries & Tools</h3>
+                  <h3 className="text-lg font-medium font-sans">
+                    Libraries & Tools
+                  </h3>
                   <div className="mt-2 flex flex-wrap gap-2">
-                    {["PyTorch", "Scikit-learn", "Pandas", "NumPy", "Matplotlib", "Plotly", "Streamlit"].map(
+                    {[
+                      "PyTorch",
+                      "Scikit-learn",
+                      "Pandas",
+                      "NumPy",
+                      "Matplotlib",
+                      "Plotly",
+                      "Streamlit",
+                    ].map((skill) => (
+                      <Badge
+                        key={skill}
+                        variant="outline"
+                        className="rounded-full font-mono text-sm font-light text-muted-foreground"
+                      >
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-medium font-sans">
+                    Applications
+                  </h3>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    {["Excel", "Power BI", "Tableau", "Git", "GitHub"].map(
                       (skill) => (
-                        <Badge key={skill} variant="outline" className="rounded-full">
+                        <Badge
+                          key={skill}
+                          variant="outline"
+                          className="rounded-full font-mono text-sm font-light text-muted-foreground"
+                        >
                           {skill}
                         </Badge>
-                      ),
+                      )
                     )}
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-medium">Applications</h3>
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    {["Excel", "Power BI", "Tableau", "Git", "GitHub"].map((skill) => (
-                      <Badge key={skill} variant="outline" className="rounded-full">
-                        {skill}
-                      </Badge>
-                    ))}
                   </div>
                 </div>
 
                 <div>
                   <h3 className="text-lg font-medium">Certifications</h3>
                   <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
-                    <li>• Financial Engineering and Risk Management Specialization — Columbia University (Nov 2024)</li>
-                    <li>• Machine Learning Specialization — DeepLearning.AI & Stanford University (Aug 2024)</li>
-                    <li>• Google Data Analytics Professional Certificate — Google (Jul 2023)</li>
+                    <li>
+                      • Financial Engineering and Risk Management Specialization
+                      — Columbia University (Nov 2024)
+                    </li>
+                    <li>
+                      • Machine Learning Specialization — DeepLearning.AI &
+                      Stanford University (Aug 2024)
+                    </li>
+                    <li>
+                      • Google Data Analytics Professional Certificate — Google
+                      (Jul 2023)
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -197,7 +306,9 @@ export default function Home() {
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
-              <h2 className="text-2xl font-bold tracking-tighter sm:text-3xl">Get in Touch</h2>
+              <h2 className="font-sans font-semibold text-2xl tracking-tighter sm:text-3xl">
+                Get in Touch
+              </h2>
               <p className="max-w-[600px] text-muted-foreground">
                 Interested in working together or have any questions?
               </p>
@@ -207,12 +318,20 @@ export default function Home() {
                 <Link href="mailto:pupipat.sk@gmail.com">Email Me</Link>
               </Button>
               <Button variant="outline" asChild>
-                <Link href="https://www.linkedin.com/in/pupipatsk" target="_blank" rel="noopener noreferrer">
+                <Link
+                  href="https://www.linkedin.com/in/pupipatsk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
                 </Link>
               </Button>
               <Button variant="outline" asChild>
-                <Link href="https://github.com/pupipatsk" target="_blank" rel="noopener noreferrer">
+                <Link
+                  href="https://github.com/pupipatsk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Github className="mr-2 h-4 w-4" /> GitHub
                 </Link>
               </Button>
@@ -221,5 +340,5 @@ export default function Home() {
         </div>
       </section>
     </div>
-  )
+  );
 }
