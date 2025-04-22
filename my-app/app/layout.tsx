@@ -25,7 +25,6 @@ const monoFont = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
   display: "swap",
-  weight: ["300"]
 });
 
 export const metadata: Metadata = {
