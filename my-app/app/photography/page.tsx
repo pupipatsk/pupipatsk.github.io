@@ -56,7 +56,7 @@ export default function PhotographyPage() {
       </div>
 
       <Tabs defaultValue="all" className="mb-8">
-        <TabsList className="mb-6">
+      <TabsList className="mb-6 flex overflow-x-auto whitespace-nowrap justify-start">
           {categories.map((category) => (
             <TabsTrigger key={category.id} value={category.id}>
               {category.name}
