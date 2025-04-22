@@ -22,7 +22,7 @@ export default function Navbar() {
       <div className="container flex h-16 items-center justify-between">
         <Link
           href="/"
-          className="flex items-center gap-2 font-serif text-xl font-medium"
+          className="flex items-center gap-2 font-serif text-xl"
         >
           <UserRound className="w-5 h-5"/> pupipat.sk
         </Link>

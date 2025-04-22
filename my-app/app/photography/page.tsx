@@ -10,28 +10,26 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ExternalLink, Instagram, Mail } from "lucide-react";
-
+import { ExternalLink, Instagram } from "lucide-react";
+export const dynamic = "force-dynamic";
 export default function PhotographyPage() {
   // Photography categories
   const categories = [
     { id: "all", name: "All Work" },
     { id: "events", name: "Events" },
-    { id: "portrait", name: "Portrait" },
+    { id: "street", name: "Street" },
     { id: "landscape", name: "Landscape" },
+    { id: "portrait", name: "Portrait" },
   ];
 
   // Photography items (placeholder data)
   const photos = [
-    { id: 1, title: "School Event", category: "events" },
-    { id: 2, title: "Urban Portrait", category: "portrait" },
-    { id: 3, title: "Mountain View", category: "landscape" },
-    { id: 4, title: "Graduation Ceremony", category: "events" },
-    { id: 5, title: "Environmental Portrait", category: "portrait" },
-    { id: 6, title: "Coastal Sunset", category: "landscape" },
-    { id: 7, title: "University Fair", category: "events" },
-    { id: 8, title: "Studio Portrait", category: "portrait" },
-    { id: 9, title: "City Skyline", category: "landscape" },
+    { id: 4, title: "", category: "landscape", src: "/photography/lnd-1.jpg" },
+    { id: 2, title: "", category: "events", src: "/photography/evt-1.jpg" },
+    { id: 3, title: "", category: "portrait", src: "/photography/ptr-1.jpg" },
+    { id: 1, title: "", category: "street", src: "/photography/st-2.jpg" },
+    { id: 5, title: "", category: "events", src: "/photography/evt-3.jpg" },
+    { id: 6, title: "", category: "landscape", src: "/photography/lnd-2.jpg" },
   ];
 
   return (
@@ -77,14 +75,15 @@ export default function PhotographyPage() {
                 .map((photo) => (
                   <div key={photo.id} className="photo-item">
                     <Image
-                      src={`/placeholder.svg?height=500&width=500`}
-                      alt={photo.title}
+                      src={photo.src || "/placeholder.svg?height=500&width=500"}
+                      alt={photo.title || "Untitled"}
                       width={500}
                       height={500}
                       className="rounded-md"
+                      loading="lazy"
                     />
                     <div className="mt-2">
-                      <h3 className="font-medium">{photo.title}</h3>
+                      <h3 className="font-medium">{photo.title || "Untitled"}</h3>
                       <p className="text-sm capitalize text-muted-foreground">
                         {photo.category}
                       </p>

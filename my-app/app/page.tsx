@@ -33,7 +33,7 @@ export default function Home() {
                     View Resume <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
-                <Button variant="outline" asChild>
+                <Button variant="secondary" asChild>
                   <Link href="/photography">
                     View Photography <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
@@ -55,7 +55,7 @@ export default function Home() {
       </section>
 
       {/* Featured Work Section */}
-      <section className="border-t border-border py-12 md:py-16">
+      {/* <section className="border-t border-border py-12 md:py-16">
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
@@ -101,7 +101,7 @@ export default function Home() {
             </Button>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Achievements Section */}
       {/* <section className="border-t border-border py-12 md:py-16">
