@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -11,8 +12,13 @@ import {
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ExternalLink, Instagram } from "lucide-react";
+
+import { useState } from "react";
+
+
 export const dynamic = "force-dynamic";
 export default function PhotographyPage() {
+  const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
   // Photography categories
   const categories = [
     { id: "all", name: "All Work" },
@@ -56,7 +62,7 @@ export default function PhotographyPage() {
       </div>
 
       <Tabs defaultValue="all" className="mb-8">
-      <TabsList className="mb-6 flex overflow-x-auto whitespace-nowrap justify-start">
+        <TabsList className="mb-6 flex overflow-x-auto whitespace-nowrap justify-start">
           {categories.map((category) => (
             <TabsTrigger key={category.id} value={category.id}>
               {category.name}
@@ -74,20 +80,17 @@ export default function PhotographyPage() {
                 )
                 .map((photo) => (
                   <div key={photo.id} className="photo-item">
-                    <Image
-                      src={photo.src || "/placeholder.svg?height=500&width=500"}
-                      alt={photo.title || "Untitled"}
-                      width={500}
-                      height={500}
-                      className="rounded-md"
-                      loading="lazy"
-                    />
-                    <div className="mt-2">
-                      <h3 className="font-medium">{photo.title || "Untitled"}</h3>
-                      <p className="text-sm capitalize text-muted-foreground">
-                        {photo.category}
-                      </p>
-                    </div>
+                      <Image
+                        src={
+                          photo.src || "/placeholder.svg?height=500&width=500"
+                        }
+                        alt={photo.title || "Untitled"}
+                        width={500}
+                        height={500}
+                        className="rounded-md"
+                        loading="lazy"
+                        onClick={() => setSelectedPhoto(photo.src)}
+                      />
                   </div>
                 ))}
             </div>
@@ -142,6 +145,31 @@ export default function PhotographyPage() {
           </Button> */}
         </CardFooter>
       </Card>
+      {selectedPhoto && (
+        <div
+          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center"
+          onClick={() => setSelectedPhoto(null)}
+        >
+          <div
+            className="relative max-w-3xl w-full p-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={selectedPhoto}
+              alt="Full size"
+              width={1200}
+              height={800}
+              className="rounded-lg object-contain max-h-[90vh] mx-auto"
+            />
+            <button
+              onClick={() => setSelectedPhoto(null)}
+              className="absolute top-4 right-4 text-white text-sm p-2"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
