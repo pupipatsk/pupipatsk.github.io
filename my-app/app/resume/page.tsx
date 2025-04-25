@@ -98,7 +98,7 @@ export default function ResumePage() {
                 various school events
               </li>
             </ul>
-            {/* <div className="mt-2 flex flex-wrap gap-2">
+            <div className="mt-2 flex flex-wrap gap-2">
               <Badge
                 variant="outline"
                 className="rounded-full font-mono text-sm font-light text-muted-foreground"
@@ -110,13 +110,13 @@ export default function ResumePage() {
                 className="rounded-full font-mono text-sm font-light text-muted-foreground"
               >
                 <Badge
-                  variant="outline"
+                  variant="secondary"
                   className="rounded-full font-mono text-sm font-light text-muted-foreground"
                 >
                   Photography
                 </Badge>
               </Link>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>
@@ -185,6 +185,26 @@ export default function ResumePage() {
                     optimization to improve performance.
                   </li>
                 </ul>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  <Badge
+                    variant="outline"
+                    className="rounded-full font-mono text-sm font-light text-muted-foreground"
+                  >
+                    Machine Learning
+                  </Badge>
+                  <Badge
+                    variant="outline"
+                    className="rounded-full font-mono text-sm font-light text-muted-foreground"
+                  >
+                    Time-Series
+                  </Badge>
+                  <Badge
+                    variant="outline"
+                    className="rounded-full font-mono text-sm font-light text-muted-foreground"
+                  >
+                    Credit Risk Analytics
+                  </Badge>
+                </div>
               </div>
             </div>
           </div>
@@ -237,6 +257,26 @@ export default function ResumePage() {
             <p className="text-sm text-muted-foreground">
               Created a machine learning model to forecast credit default risk.
             </p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              <Badge
+                variant="outline"
+                className="rounded-full font-mono text-sm font-light text-muted-foreground"
+              >
+                Credit Risk Modeling
+              </Badge>
+              <Badge
+                variant="outline"
+                className="rounded-full font-mono text-sm font-light text-muted-foreground"
+              >
+                Hackathon Winner
+              </Badge>
+              <Badge
+                variant="outline"
+                className="rounded-full font-mono text-sm font-light text-muted-foreground"
+              >
+                Optimization
+              </Badge>
+            </div>
           </div>
 
           <div className="space-y-2">
@@ -262,6 +302,26 @@ export default function ResumePage() {
                 and minimize risks.
               </li>
             </ul>
+            <div className="mt-2 flex flex-wrap gap-2">
+              <Badge
+                variant="outline"
+                className="rounded-full font-mono text-sm font-light text-muted-foreground"
+              >
+                Quantitative Finance
+              </Badge>
+              <Badge
+                variant="outline"
+                className="rounded-full font-mono text-sm font-light text-muted-foreground"
+              >
+                Factor Modeling
+              </Badge>
+              <Badge
+                variant="outline"
+                className="rounded-full font-mono text-sm font-light text-muted-foreground"
+              >
+                Alpha Modeling
+              </Badge>
+            </div>
           </div>
 
           <div className="space-y-2">
@@ -284,6 +344,26 @@ export default function ResumePage() {
                 management.
               </li>
             </ul>
+            <div className="mt-2 flex flex-wrap gap-2">
+              <Badge
+                variant="outline"
+                className="rounded-full font-mono text-sm font-light text-muted-foreground"
+              >
+                Targeted Marketing Models
+              </Badge>
+              <Badge
+                variant="outline"
+                className="rounded-full font-mono text-sm font-light text-muted-foreground"
+              >
+                Ensemble Learning
+              </Badge>
+              <Badge
+                variant="outline"
+                className="rounded-full font-mono text-sm font-light text-muted-foreground"
+              >
+                Cost management
+              </Badge>
+            </div>
           </div>
 
           <div className="space-y-2">
@@ -306,6 +386,26 @@ export default function ResumePage() {
                 and CVaR of 4.64%.
               </li>
             </ul>
+            <div className="mt-2 flex flex-wrap gap-2">
+              <Badge
+                variant="outline"
+                className="rounded-full font-mono text-sm font-light text-muted-foreground"
+              >
+                Portfolio Management
+              </Badge>
+              <Badge
+                variant="outline"
+                className="rounded-full font-mono text-sm font-light text-muted-foreground"
+              >
+                Risk Metrics
+              </Badge>
+              <Badge
+                variant="outline"
+                className="rounded-full font-mono text-sm font-light text-muted-foreground"
+              >
+                Performance Analytics
+              </Badge>
+            </div>
           </div>
 
           <div className="space-y-2">
@@ -335,6 +435,26 @@ export default function ResumePage() {
                 (ROI, Sharpe Ratio, Volatility, CVaR).
               </li>
             </ul>
+            <div className="mt-2 flex flex-wrap gap-2">
+              <Badge
+                variant="outline"
+                className="rounded-full font-mono text-sm font-light text-muted-foreground"
+              >
+                Investment Tracker
+              </Badge>
+              <Badge
+                variant="outline"
+                className="rounded-full font-mono text-sm font-light text-muted-foreground"
+              >
+                Interactive Dashboard
+              </Badge>
+              <Badge
+                variant="outline"
+                className="rounded-full font-mono text-sm font-light text-muted-foreground"
+              >
+                LLM + OCR
+              </Badge>
+            </div>
           </div>
 
           <div className="space-y-2">
@@ -352,6 +472,26 @@ export default function ResumePage() {
                 industry professionals and fund managers.
               </li>
             </ul>
+            <div className="mt-2 flex flex-wrap gap-2">
+              <Badge
+                variant="outline"
+                className="rounded-full font-mono text-sm font-light text-muted-foreground"
+              >
+                Equity Research
+              </Badge>
+              <Badge
+                variant="outline"
+                className="rounded-full font-mono text-sm font-light text-muted-foreground"
+              >
+                Valuation Analysis
+              </Badge>
+              <Badge
+                variant="outline"
+                className="rounded-full font-mono text-sm font-light text-muted-foreground"
+              >
+                Investment Thesis
+              </Badge>
+            </div>
           </div>
 
           <div className="space-y-2">
@@ -398,6 +538,20 @@ export default function ResumePage() {
                 </div>
               </li>
             </ul>
+            <div className="mt-2 flex flex-wrap gap-2">
+              <Badge
+                variant="outline"
+                className="rounded-full font-mono text-sm font-light text-muted-foreground"
+              >
+                Strategic Planning
+              </Badge>
+              <Badge
+                variant="outline"
+                className="rounded-full font-mono text-sm font-light text-muted-foreground"
+              >
+                Business Innovation
+              </Badge>
+            </div>
           </div>
 
           <div className="space-y-2">
@@ -413,6 +567,14 @@ export default function ResumePage() {
               Presented ideas on meteor prevention at the National Science and
               Technology Fair 2021.
             </p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              <Badge
+                variant="outline"
+                className="rounded-full font-mono text-sm font-light text-muted-foreground"
+              >
+                Rocket Equation
+              </Badge>
+            </div>
           </div>
 
           <div className="space-y-2">
