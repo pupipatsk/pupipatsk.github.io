@@ -12,13 +12,13 @@ import {
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ExternalLink, Instagram } from "lucide-react";
-
+import { Skeleton } from "@/components/ui/skeleton";
 import { useState } from "react";
-
 
 export const dynamic = "force-dynamic";
 export default function PhotographyPage() {
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
+  const [loadedPhotos, setLoadedPhotos] = useState<Record<number, boolean>>({});
   // Photography categories
   const categories = [
     { id: "all", name: "All Work" },
@@ -63,13 +63,13 @@ export default function PhotographyPage() {
 
       <Tabs defaultValue="all" className="mb-8">
         <div className="mb-6 overflow-x-auto">
-        <TabsList className="inline-flex whitespace-nowrap justify-start">
-          {categories.map((category) => (
-            <TabsTrigger key={category.id} value={category.id}>
-              {category.name}
-            </TabsTrigger>
-          ))}
-        </TabsList>
+          <TabsList className="inline-flex whitespace-nowrap justify-start">
+            {categories.map((category) => (
+              <TabsTrigger key={category.id} value={category.id}>
+                {category.name}
+              </TabsTrigger>
+            ))}
+          </TabsList>
         </div>
         {categories.map((category) => (
           <TabsContent key={category.id} value={category.id} className="mt-0">
@@ -80,18 +80,33 @@ export default function PhotographyPage() {
                     category.id === "all" || photo.category === category.id
                 )
                 .map((photo) => (
-                  <div key={photo.id} className="photo-item">
-                      <Image
-                        src={
-                          photo.src || "/placeholder.svg?height=500&width=500"
-                        }
-                        alt={photo.title || "Untitled"}
-                        width={500}
-                        height={500}
-                        className="rounded-md"
-                        loading="lazy"
-                        onClick={() => setSelectedPhoto(photo.src)}
-                      />
+                  <div
+                    key={photo.id}
+                    className="photo-item relative aspect-square overflow-hidden"
+                  >
+                    <Skeleton
+                      className="absolute inset-0 h-full w-full"
+                      style={{
+                        visibility: loadedPhotos[photo.id]
+                          ? "hidden"
+                          : "visible",
+                      }}
+                    />
+                    <Image
+                      src={photo.src || "/placeholder.svg?height=500&width=500"}
+                      alt={photo.title || "Untitled"}
+                      width={500}
+                      height={500}
+                      className="rounded-md object-cover h-full w-full"
+                      loading="lazy"
+                      onClick={() => setSelectedPhoto(photo.src)}
+                      onLoad={() =>
+                        setLoadedPhotos((prev) => ({
+                          ...prev,
+                          [photo.id]: true,
+                        }))
+                      }
+                    />
                   </div>
                 ))}
             </div>
