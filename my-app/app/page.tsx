@@ -181,7 +181,7 @@ export default function Home() {
                     Bachelor of Engineering - Computer Engineering Major
                   </p>
                   {/* <p className="text-muted-foreground">GPA: 3.48</p> */}
-                    <div className="mt-2 flex flex-wrap gap-2">
+                  <div className="mt-2 flex flex-wrap gap-2">
                     {[
                       "Pattern Recognition (Deep Learning)",
                       "Natural Language Processing Systems (NLP)",
@@ -192,14 +192,14 @@ export default function Home() {
                       "Signal Processing",
                     ].map((course) => (
                       <Badge
-                      key={course}
-                      variant="outline"
-                      className="rounded-full font-mono text-sm font-light text-muted-foreground"
+                        key={course}
+                        variant="outline"
+                        className="rounded-full font-mono text-sm font-light text-muted-foreground"
                       >
-                      {course}
+                        {course}
                       </Badge>
                     ))}
-                    </div>
+                  </div>
                 </div>
 
                 <div className="space-y-2">
@@ -214,6 +214,25 @@ export default function Home() {
                     </li>
                     <li>• Triam Udom Photo Club (Staff and Member)</li>
                   </ul>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    <Badge
+                      variant="outline"
+                      className="rounded-full font-mono text-sm font-light text-muted-foreground"
+                    >
+                      Physics Olympiad
+                    </Badge>
+                    <Link
+                      href="./photography"
+                      className="rounded-full font-mono text-sm font-light text-muted-foreground"
+                    >
+                      <Badge
+                        variant="secondary"
+                        className="rounded-full font-mono text-sm font-light text-muted-foreground"
+                      >
+                        Photography
+                      </Badge>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -224,7 +243,9 @@ export default function Home() {
               </h2>
               <div className="space-y-4">
                 <div>
-                  <h3 className="text-lg font-medium font-sans">Programming languages</h3>
+                  <h3 className="text-lg font-medium font-sans">
+                    Programming languages
+                  </h3>
                   <div className="mt-2 flex flex-wrap gap-2">
                     {[
                       "Python",
