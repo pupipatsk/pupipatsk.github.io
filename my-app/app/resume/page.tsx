@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
-import { BadgeCheck, Download, ExternalLink } from "lucide-react";
+import { Download, ExternalLink } from "lucide-react";
 
 export default function ResumePage() {
   return (
@@ -98,6 +98,25 @@ export default function ResumePage() {
                 various school events
               </li>
             </ul>
+            {/* <div className="mt-2 flex flex-wrap gap-2">
+              <Badge
+                variant="outline"
+                className="rounded-full font-mono text-sm font-light text-muted-foreground"
+              >
+                Physics Olympiad
+              </Badge>
+              <Link
+                href="./photography"
+                className="rounded-full font-mono text-sm font-light text-muted-foreground"
+              >
+                <Badge
+                  variant="outline"
+                  className="rounded-full font-mono text-sm font-light text-muted-foreground"
+                >
+                  Photography
+                </Badge>
+              </Link>
+            </div> */}
           </div>
         </div>
       </section>
@@ -118,8 +137,7 @@ export default function ResumePage() {
               </span>
             </div>
             <p className="text-muted-foreground">
-              Upcoming internship focused on financial risk analysis, modeling,
-              and management within one of Thailand's leading financial
+              Upcoming internship with one of Thailand's leading financial
               technology conglomerates. More details to be added upon
               completion.
             </p>
@@ -270,8 +288,38 @@ export default function ResumePage() {
 
           <div className="space-y-2">
             <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
+              <h3 className="font-bold">Investment Experience</h3>
+              <span className="text-sm text-muted-foreground">April 2024</span>
+            </div>
+            <ul className="ml-5 list-disc text-sm text-muted-foreground">
+              <li>
+                Managed a self-directed investment portfolio with a TWRR of
+                15.46%, MWRR of 34.34%, and ROI of 14.47%, achieving an AUM of
+                B119,240.51 (as of February 28, 2025).
+              </li>
+              <li>
+                Evaluated risk-adjusted performance, maintaining a Sharpe Ratio
+                of 0.54 (ifi ~ 4%, CBOE-10Y-TNX).
+              </li>
+              <li>
+                Monitored portfolio risk, with an MDD of 11.95%, VaR of 3.25%,
+                and CVaR of 4.64%.
+              </li>
+            </ul>
+          </div>
+
+          <div className="space-y-2">
+            <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
               <h3 className="font-bold">
                 Investment Portfolio Analytics Dashboard Web App
+                <Link
+                  href="https://investment-portfoliogit-kan92h8iyt5covyupaxqo7.streamlit.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-2 inline-flex items-center text-sm text-muted-foreground hover:text-foreground"
+                >
+                  <ExternalLink className="ml-1 h-4 w-4" />
+                </Link>
               </h3>
               <span className="text-sm text-muted-foreground">
                 November 2024
@@ -299,26 +347,85 @@ export default function ResumePage() {
             <p className="font-medium">⭕ Finalist</p>
             <ul className="ml-5 list-disc text-sm text-muted-foreground">
               <li>
-              Conducted equity research and valuation of a SET-listed company; presented investment thesis and risk assessment to a panel of industry professionals and fund managers.
+                Conducted equity research and valuation of a SET-listed company;
+                presented investment thesis and risk assessment to a panel of
+                industry professionals and fund managers.
               </li>
             </ul>
           </div>
 
           <div className="space-y-2">
             <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
-              <h3 className="font-bold">Business Case Competitions</h3>
-              <span className="text-sm text-muted-foreground">2023</span>
+              <h3 className="font-bold">
+                Participation in Business Case Competitions
+              </h3>
+              {/* <span className="text-sm text-muted-foreground">2023</span> */}
             </div>
             <ul className="ml-5 list-disc text-sm text-muted-foreground">
               <li>
-                Hult Prize at Chulalongkorn — Developed a social enterprise idea
-                aligned with UN SDGs.
+                <div className="flex justify-between">
+                  <span>
+                    <span className="font-serif text-base not-italic text-foreground">
+                      Intania Case Competition
+                    </span>{" "}
+                    — Built UAM strategy using AI/cloud for 200K trips/year
+                    goal.
+                  </span>
+                  <span className="ml-4 whitespace-nowrap">March 2025</span>
+                </div>
               </li>
               <li>
-                Chulalongkorn Case Discovery x Ascend Money — Formulated a
-                strategic plan for financial services application.
+                <div className="flex justify-between">
+                  <span>
+                    <span className="font-serif text-base not-italic text-foreground">
+                      Hult Prize at Chulalongkorn
+                    </span>{" "}
+                    — Developed a social enterprise idea aligned with UN SDGs.
+                  </span>
+                  <span className="ml-4 whitespace-nowrap">2023</span>
+                </div>
+              </li>
+              <li>
+                <div className="flex justify-between">
+                  <span>
+                    <span className="font-serif text-base not-italic text-foreground">
+                      Chulalongkorn Case Discovery x Ascend Money
+                    </span>{" "}
+                    — Formulated a strategic plan for financial services
+                    application.
+                  </span>
+                  <span className="ml-4 whitespace-nowrap">2023</span>
+                </div>
               </li>
             </ul>
+          </div>
+
+          <div className="space-y-2">
+            <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
+              <h3 className="font-bold">
+                Final round in Space Youth Challenge by NARIT
+              </h3>
+              <span className="text-sm text-muted-foreground">
+                December 2021
+              </span>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Presented ideas on meteor prevention at the National Science and
+              Technology Fair 2021.
+            </p>
+          </div>
+
+          <div className="space-y-2">
+            <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
+              <h3 className="font-bold">
+                The 2nd Kibo Robot Programming Challenge by NSTDA x JAXA
+              </h3>
+              <span className="text-sm text-muted-foreground">July 2021</span>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Programmed a robot to move in a specified direction while on the
+              International Space Station (ISS).
+            </p>
           </div>
         </div>
       </section>
