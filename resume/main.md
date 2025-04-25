@@ -4,7 +4,7 @@
 - Bangkok, Thailand
 - [LinkedIn.com/pupipatsk](www.linkedin.com/in/pupipatsk)
 - [GitHub.com/pupipatsk](https://github.com/pupipatsk)
-- [https://pupipatsk.github.io/](https://pupipatsk.github.io/)
+- [https://pupipatsk.vercel.app/resume](https://pupipatsk.vercel.app/resume)
 
 ## EDUCATION
 
