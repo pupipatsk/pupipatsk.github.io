@@ -133,6 +133,13 @@ May 2024
 
 - *Google Data Analytics Professional* - Google July 2023
 
+**Final round in Space Youth Challenge by NARIT** December 2021
+- Presented ideas on meteor prevention at the National Science and Technology Fair 2021.
+
+**Participated in The 2nd Kibo Robot Programming Challenge by NSTDA x JAXA** July 2021
+- Programmed a robot to move in a specified direction while on the International Space Station (ISS).
+
+
 ## MISCELLANEOUS
 
 **Technical Skills**
