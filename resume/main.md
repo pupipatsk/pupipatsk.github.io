@@ -117,6 +117,9 @@ May 2024
 - Built and deployed a dashboard to calculate performance metrics e.g.,
   ROI, Sharpe Ratio, Volatility, CVaR.
 
+**Fine-tuning Large Language Diffusion Models**
+- Fine-tuned large language diffusion models for text summarization, integrated with LangChain and evaluated using LLM-as-a-judge to enhance output quality and alignment.
+
 ### Participation in Business Case Competitions
 
 - *Intania Case Competition* - Built UAM strategy using AI/cloud for 200K trips/year goal. March 2025
