@@ -38,8 +38,8 @@
 
 **Risk Management Analyst Intern**
 - SCBX
-- (Upcoming summer internship) May 2025 - July 2025
-Upcoming internship with one of Thailand's leading financial technology conglomerates. More details to be added upon completion.
+- May 2025 - July 2025
+- Managed the assessment of business processes across SCBX’s 12 subsidiaries through a group-wide RCSA, identifying key risks and evaluating control effectiveness.
 
 **Data Scientist Intern**
 - Kiatnakin Phatra Bank
